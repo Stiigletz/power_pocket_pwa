@@ -113,17 +113,30 @@ function buildForm(name){
   const form = sel("form");
   form.innerHTML = "";
   spec.inputs.forEach(inp => {
+    const wrapper = document.createElement("div");
+    wrapper.style.display = "flex";
+    wrapper.style.flexDirection = "column";
+    wrapper.style.alignItems = "center";
+    wrapper.style.marginBottom = "8px";
+
+    const label = document.createElement("label");
+    label.textContent = inp.label;
+    wrapper.appendChild(label);
+
     const el = document.createElement("input");
     el.type = "text";
-    el.placeholder = inp.hint;
+    el.placeholder = inp.hint;     // e.g. "e.g. 80"
     el.className = "input";
     el.inputMode = "decimal";
     el.autocapitalize = "off";
     el.autocorrect = "off";
     el.dataset.key = inp.key;
-    form.appendChild(el);
+    wrapper.appendChild(el);
+
+    form.appendChild(wrapper);
   });
 }
+
 
 function collectInputs(name){
   const spec = CALCS[name];
