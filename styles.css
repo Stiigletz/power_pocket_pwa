@@ -72,3 +72,19 @@ body{
 .btn:active{transform: translateY(1px)}
 .result{text-align:center;margin-top:12px;min-height:24px;font-weight:600}
 .result.error{color:#ffb3b3}
+
+/* Dropdown fix */
+select option {
+  color: #000;
+  background: #fff;
+}
+
+/* Labels above inputs */
+.form label {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 4px;
+  display: block;
+  text-align: center;
+}
+
