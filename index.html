@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a3d91">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="assets/icon-512.png">
+  <title>Power Pocket Calculators</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="title">Power Pocket Calculators</div>
+    </header>
+
+    <main class="center">
+      <div class="card">
+        <h1 class="heading">Select Calculator</h1>
+        <div class="row">
+          <select id="calc-select" class="dropdown"></select>
+        </div>
+        <div id="form" class="form"></div>
+        <div class="buttons">
+          <button id="compute" class="btn primary">Compute</button>
+          <button id="clear" class="btn">Clear</button>
+        </div>
+        <div id="result" class="result" aria-live="polite"></div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
